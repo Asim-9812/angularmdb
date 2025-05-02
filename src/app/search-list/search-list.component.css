@@ -1,0 +1,134 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+
+a {
+    text-decoration: none;      /* Remove underline */
+    color: inherit;             /* Inherit color from parent (prevents purple visited links) */
+  }
+  
+  a:visited {
+    text-decoration: none;      /* No underline after visit */
+    color: inherit;             /* Prevents default "visited" color */
+  }
+
+  .search-header {
+    display: flex;
+    justify-content: flex-start; /* align items to the left */
+    align-items: center;         /* center items vertically */
+    flex-direction: row;
+    padding: 0 16px;
+    height: 15vh;
+    background: url('/assets/wallpaper.jpg') no-repeat center center;
+    background-size: cover;
+    position: fixed;
+    gap: 16px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /* Ensure the text is above the background */
+  }
+  
+  
+.search-header h1 {
+    color: white;
+    font-size: 3rem;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+
+    /* Input style */
+    .search-input {
+        height: 2vh;
+        padding: 10px;
+        border-radius: 20px;
+        width: 50vh;
+        background-color: rgb(255, 255, 255);
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-right: 10px;
+      }
+    
+    
+    
+      .search-input::placeholder {
+        color: black; /* Light white text */
+        font-style: bold;
+        font-size: 16px;
+      }
+      
+      .search-button {
+        padding: 10px 20px;
+        border-radius: 20px;
+        background-color: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        /* min-height: 40px; Optional: ensures enough vertical space */
+        height: 5vh;
+      }
+      
+      .search-list {
+        padding: 20px;
+        margin-top: 15vh; /* to avoid overlap with fixed header */
+      }
+      
+      .movie-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 24px;
+      }
+      
+      .movie-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(0, 0, 0);
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        transition: transform 0.2s ease;
+        padding: 10px;
+        text-align: center;
+      }
+      
+      .movie-card:hover {
+        transform: scale(1.03);
+      }
+      
+      .movie-poster {
+        width: 100%;
+        height: 240px; /* fixed height for consistency */
+        object-fit: cover; /* crops to fill the box while maintaining aspect ratio */
+        border-radius: 8px;
+      }
+      
+      .movie-title {
+        margin: 10px 0 4px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #e4e4e4;
+      }
+      
+      .movie-overview {
+        font-size: 0.875rem;
+        color: #d8d8d8;
+      }
+      
+

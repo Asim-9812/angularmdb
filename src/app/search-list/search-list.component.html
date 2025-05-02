@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{searchText}}</title>
+  <!-- Importing Poppins font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="search-body">
+
+    <div class = 'search-header'>
+        
+        <a [routerLink]="['/']"><h1 class="search-title">WOM</h1></a>
+        <form [formGroup]="searchForm">
+            <input type="text" formControlName="searchText" placeholder="Search for movies..." name="search-query" class="search-input"/>
+            <button type="search-button" class="search-button" (click)="onSearch()">Search</button>
+          </form>
+        
+    </div>   
+
+    <br>
+
+    <div class="search-list">
+        <h1 class="search-title">Search Results for "{{searchText}}"</h1>
+        <section class="movie-list">
+        <div *ngFor="let movie of searchedMovies" class="movie-card">
+            <img [src]="movie.Poster" alt="{{movie.Title}} Poster" class="movie-poster" />
+            <h2 class="movie-title">{{movie.Title}}</h2>
+            <p class="movie-overview">{{movie.Year}}</p>
+        </div>
+        </section>
+    </div>
+
+</body>>
+
+</html>

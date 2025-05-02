@@ -1,0 +1,28 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to World of Movies</title>
+  <!-- Importing Poppins font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+</head>
+
+<body class="home">
+    <div class="home-search">
+        <h1 class="welcome-title">{{title}}</h1>
+        <br>
+        <section class="search-section">
+          <form [formGroup]="searchForm">
+            <input type="text" formControlName="searchText" placeholder="Search for movies..." name="search-query" class="search-input"/>
+            <button type="search-button" class="search-button" (click)="onSearch()">Search</button>
+          </form>
+        </section>
+    </div>
+</body>  
+</html>
+
+
