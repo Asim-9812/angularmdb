@@ -28,9 +28,9 @@
         <h1 class="search-title">Search Results for "{{searchText}}"</h1>
         <section class="movie-list">
         <div *ngFor="let movie of searchedMovies" class="movie-card">
-            <img [src]="movie.Poster" alt="{{movie.Title}} Poster" class="movie-poster" />
+            <a [routerLink]="['/details',movie.imdbID,]" [queryParams]="{ title: movie.Title }"><img [src]="movie.Poster" alt="{{movie.Title}} Poster" class="movie-poster" />
             <h2 class="movie-title">{{movie.Title}}</h2>
-            <p class="movie-overview">{{movie.Year}}</p>
+            <p class="movie-overview">{{movie.Year}}</p></a>
         </div>
         </section>
     </div>

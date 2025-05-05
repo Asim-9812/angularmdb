@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <!-- Importing Poppins font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="movie-detail">
+
+    <div class="page-layout">
+        <div class="header">
+          <a [routerLink]="['/']"><h1 class="title">WOM</h1></a>
+        </div> 
+    
+        <div class="movie-info">
+          <h2 class="movie-title">{{title}}</h2>
+          <br>
+            <img [src]="movieDetail?.Poster" alt="{{title}} Poster" class="movie-poster" />
+        </div>
+      </div>
+
+
+
+
+</body>
+
+</html>

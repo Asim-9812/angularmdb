@@ -6,7 +6,17 @@ import {bootstrapApplication, provideProtractorTestingSupport} from '@angular/pl
 import {AppComponent} from './app/app.component';
 import {provideRouter} from '@angular/router';
 import routeConfig from './app/route';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { environment } from './env/environment';
 
-bootstrapApplication(AppComponent, {providers: [provideProtractorTestingSupport(), provideRouter(routeConfig)]}).catch((err) =>
+
+bootstrapApplication(
+  AppComponent, 
+  {providers: [
+    provideProtractorTestingSupport(),
+    provideFirebaseApp(() => initializeApp(environment.firebase),
+    provideAuth(() => getAuth())),
+     provideRouter(routeConfig)]}).catch((err) =>
   console.error(err),
 );

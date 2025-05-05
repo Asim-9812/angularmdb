@@ -1,0 +1,62 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+
+a {
+    text-decoration: none;      /* Remove underline */
+    color: inherit;             /* Inherit color from parent (prevents purple visited links) */
+  }
+  
+  a:visited {
+    text-decoration: none;      /* No underline after visit */
+    color: inherit;             /* Prevents default "visited" color */
+  }
+
+  .header {
+    display: flex;
+    justify-content: flex-start; /* align items to the left */
+    align-items: center;         /* center items vertically */
+    flex-direction: row;
+    padding: 0 16px;
+    height: 15vh;
+    background: url('/assets/wallpaper.jpg') no-repeat center center;
+    background-size: cover;
+    position: fixed;
+    gap: 16px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /* Ensure the text is above the background */
+  }
+  
+  
+.header h1 {
+    color: white;
+    font-size: 3rem;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+
+  .page-layout {
+    display: flex;
+    flex-direction: row; /* horizontal layout */
+    height: 100vh;
+  }
+
+
+
+  .movie-info {
+    flex: 1;
+    padding: 20px;
+    margin-top: 15vh; /* to avoid overlapping with fixed header */
+    flex-direction: column;
+  }
+
