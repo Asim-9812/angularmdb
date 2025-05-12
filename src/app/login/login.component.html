@@ -1,0 +1,8 @@
+<!-- login.component.html -->
+<form (ngSubmit)="login()">
+    <input type="email" [(ngModel)]="email" name="email" required placeholder="Email">
+    <input type="password" [(ngModel)]="password" name="password" required placeholder="Password">
+    <button type="submit" (click) = login()>Login</button>
+    <p *ngIf="error" style="color: red;">{{ error }}</p>
+  </form>
+  

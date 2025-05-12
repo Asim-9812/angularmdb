@@ -11,22 +11,34 @@
 </head>
 
 <body class="movie-detail">
+  <div class="header">
+    <a [routerLink]="['/']"><h1 class="title">WOM</h1></a>
+  </div>
 
-    <div class="page-layout">
-        <div class="header">
-          <a [routerLink]="['/']"><h1 class="title">WOM</h1></a>
-        </div> 
-    
-        <div class="movie-info">
-          <h2 class="movie-title">{{title}}</h2>
-          <br>
-            <img [src]="movieDetail?.Poster" alt="{{title}} Poster" class="movie-poster" />
-        </div>
+  <div class="page-layout">
+    <section class="content-section">
+      <div class="movie-info">
+        <h2 class="movie-title">{{title}}</h2>
+        <br>
+        <img [src]="movieDetail?.Poster" alt="{{title}} Poster" class="movie-poster" />
       </div>
 
-
-
-
+      <!-- Star Rating beside movie-info -->
+      <div *ngIf="isLoggedIn" class="star-rating">
+        <h3>Rate this Movie:</h3>
+        <div class="stars">
+          <span *ngFor="let star of stars; let i = index" class="star" 
+                (click)="rateMovie(i + 1)" 
+                [class.filled]="i < rating">
+            &#9733;
+          </span>
+        </div>
+        <p>Current Rating: {{ rating }} / 5</p>
+        <button (click)="submitRating()" class="submit-rating">Submit Rating</button>
+      </div>
+    </section>
+  </div>
 </body>
+
 
 </html>

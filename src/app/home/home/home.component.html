@@ -22,6 +22,10 @@
           </form>
         </section>
     </div>
+    <br>
+    <div *ngIf="!isLoggedIn" class="login-class">
+      <button class="login-button" (click)="login()">Login</button>
+    </div>
 </body>  
 </html>
 

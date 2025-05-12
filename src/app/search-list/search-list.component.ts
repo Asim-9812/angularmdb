@@ -1,6 +1,6 @@
 import { Component, inject} from '@angular/core';
 import { Movie, MovieSearchResponse } from '../../core/models/movie.model';
-import { MovieService } from '../../core/services/movie.service';
+import { MovieService } from '../../core/services/movie_services/movie.service';
 import path from 'path';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';

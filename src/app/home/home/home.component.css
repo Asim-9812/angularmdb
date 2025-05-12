@@ -42,6 +42,7 @@ body::before {
   box-sizing: border-box;
   position: fixed;
   z-index: 1;
+  flex-direction: column;
 }
 
   
@@ -104,3 +105,20 @@ body::before {
     min-height: 40px; /* Optional: ensures enough vertical space */
   }
   
+
+  .login-button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px; /* Optional: ensures enough vertical space */
+  }

@@ -46,17 +46,61 @@ a {
 
 
   .page-layout {
-    display: flex;
-    flex-direction: row; /* horizontal layout */
-    height: 100vh;
+    margin-top: 15vh; /* to push below fixed header */
+    padding: 20px;
   }
-
-
-
+  
+  .content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* responsive support */
+  }
+  
   .movie-info {
     flex: 1;
-    padding: 20px;
-    margin-top: 15vh; /* to avoid overlapping with fixed header */
-    flex-direction: column;
+    max-width: 60%;
   }
+  
+  .star-rating {
+    max-width: 30%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stars {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .star {
+    font-size: 2rem;
+    color: lightgray;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .star.filled {
+    color: gold;
+  }
+  
+
+
+  .star:hover {
+    cursor: pointer;
+  }
+
+  .submit-rating {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  
 
